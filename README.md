@@ -3,7 +3,7 @@
 TreeWalker is an Elixir library to recursively walk through directories,
 streaming the file paths discovered as it goes.
 
-It can optionall skip directories or return `File.Stat` structs if enabled.
+It can optionally skip directories or return `File.Stat` structs if enabled.
 
 The full documentation is available at <https://hexdocs.pm/tree_walker>.
 
@@ -20,7 +20,7 @@ def deps do
 end
 ```
 
-## Example
+## Example usages
 
 To find all the `.json` files in a repo, skipping the `.git` directory, you
 might do something like:
