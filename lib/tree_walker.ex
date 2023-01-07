@@ -21,7 +21,7 @@ defmodule TreeWalker do
     traversed. Defaults to `nil`.
 
   * `sort`: sorts the files inside a directory before returning them. Defaults to
-    `false`.
+    `true`.
 
   * `include_stat`: instead of returning a `String` for each path, returns a
     tuple of the `{path, %File.Stat{}}`. This is handy if you want to check for
