@@ -4,9 +4,11 @@ defmodule TreeWalker.MixProject do
   def project do
     [
       app: :tree_walker,
+      description: description(),
       version: "0.1.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
+      package: package(),
       deps: deps()
     ]
   end
@@ -15,6 +17,17 @@ defmodule TreeWalker.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp description do
+    "Recursively walks a directory tree, returning the files discovered in a Stream"
+  end
+
+  defp package do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/breakroom/tree_walker"}
     ]
   end
 
