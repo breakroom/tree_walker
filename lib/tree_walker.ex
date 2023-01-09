@@ -63,7 +63,9 @@ defmodule TreeWalker do
 
     {dir_paths, file_paths} = scan_paths(current_dir, skip_dir_fun, sort, include_stat)
 
-    {file_paths, next_dirs ++ dir_paths}
+    new_dirs = dir_paths ++ next_dirs
+
+    {file_paths, new_dirs}
   end
 
   defp noop(_), do: nil
